@@ -1,0 +1,150 @@
+﻿@import '_mix.scss';
+.similar-wrap {
+	width: 27%;
+	order: 4;
+	margin-left: 3%;
+	.similar {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.specifications-container {
+	width: 70%;
+}
+
+.specifications {
+	margin-top: 50px;
+	@include fl();
+	flex-wrap: wrap;
+	color: $fd;
+	h3 {
+		width: 100%;
+		margin-top: 0;
+	}
+	&__menu-list {
+		width: 100%;
+		@include fl();
+		font-size: 16px;
+		font-weight: 700;
+		// justify-content: space-between;
+		border-bottom: 2px solid #e9eaeb;
+		margin-bottom: 40px;
+		li {
+			@include fl();
+			padding: 0 33px;
+			a {
+				padding: 15px 0;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:hover a {
+				border-bottom: 2px solid #fb2539;
+				color: #fb2539;
+				text-decoration: none;
+				margin-bottom: -2px;
+			}
+		}
+	}
+	&__spec-table {
+		width: 100%;
+		color: $fd;
+		td {
+			height: 44px;
+			width: 50%;
+			padding: 0 23px;
+		}
+		tr:nth-child(odd) {
+			background-color: #eff0f3;
+		}
+	}
+	&__buttons {
+		@include fl();
+		margin: 60px 0 30px;
+		.feedbacks,
+		.questions,
+		.give-feedback {
+			font-size: 16px;
+			font-weight: 700;
+			width: 170px;
+			height: 40px;
+			border: 1px solid #e1e1e1;
+			background-color: transparent;
+			&.active {
+				border: 1px solid #fb2539;
+			}
+		}
+		.questions {}
+		.give-feedback {
+			background-color: #ffdc2c;
+			border-color: #ffdc2c;
+			margin-left: auto;
+		}
+	}
+}
+
+.feedback {
+	border: 1px solid #ffdc2c;
+	padding: 30px;
+	@include fl();
+	&__name {
+		@include fli();
+		font-size: 16px;
+		font-weight: 700;
+		margin-right: 25px;
+	}
+	&__date {
+		@include fli();
+		color: #999999;
+	}
+	&__advantage {
+		margin: 20px 0;
+		span {
+			color: #57ae85;
+			font-weight: 700;
+		}
+	}
+	&__flaw {
+		margin: 20px 0;
+		span {
+			color: #f8727e;
+			font-weight: 700;
+		}
+	}
+	&__rating-wrap {
+		min-width: 176px;
+		border-left: 1px solid #e9eaeb;
+		margin-left: 25px;
+		padding-left: 20px;
+		@include fl();
+		flex-direction: column;
+	}
+	&__answers__wrap {
+		@include fl();
+	}
+	&__answers {
+		border-bottom: 1px solid #c2c2c2;
+		margin-right: 35px;
+	}
+	&__give-answer {
+		border-bottom: 1px solid #c2c2c2;
+	}
+	&__likes {
+		margin-left: auto;
+		color:$fl;
+	}
+	&__rating-wrap__header{
+		font-size: 16px;
+		margin-bottom: 20px;	
+		font-weight: 700;
+	}
+	.star-rating {
+		@include fli();
+	}
+	.star-couner {
+		font-size: 16px;
+		font-weight: 700;
+		margin-left: auto;
+	}
+}

@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 pokemon" ng-repeat="pokemon in pokemons.pokemons | filter:{types:[{name:main.type}, {name:main.type}]}" ng-class="{fav : pokemon.favorite}">
+			<div ng-click="main.showModal(pokemon)">
+				<img ng-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.pkdx_id}}.png" alt="{{pokemon.name}}">
+				<!-- <img src="http://pokeapi.co/media/img/{{pokemon.pkdx_id}}.png" alt="{{pokemon.name}}"> -->
+				<h3>{{pokemon.name}}</h3>
+			</div>
+			<span ng-repeat="type in pokemon.types" class="{{type.name}} type" ng-click="main.selectType(type.name)">{{type.name}}</span>
+			<hr>
+			<button class="btn btn-primary" ng-click="main.addToFavorites(pokemon)" ng-if="!pokemon.favorite">Add to favorites</button>
+			<button class="btn btn-primary" ng-click="main.removeFromFavorites(pokemon)" ng-if="pokemon.favorite">Remove from favorites</button>
+		</div>
+	</div>
+</div>

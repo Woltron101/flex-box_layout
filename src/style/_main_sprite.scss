@@ -1,0 +1,132 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arr-down-red {
+  background-image: url(../img/sprite.png);
+  background-position: -147px -52px;
+  width: 11px;
+  height: 8px;
+}
+.icon-burger {
+  background-image: url(../img/sprite.png);
+  background-position: -69px -71px;
+  width: 20px;
+  height: 14px;
+}
+.icon-cart {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -33px;
+  width: 28px;
+  height: 28px;
+}
+.icon-chart {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -71px;
+  width: 28px;
+  height: 18px;
+}
+.icon-cmpareBtn {
+  background-image: url(../img/sprite.png);
+  background-position: -80px 0px;
+  width: 27px;
+  height: 19px;
+}
+.icon-compare {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 34px;
+  height: 23px;
+}
+.icon-feedback {
+  background-image: url(../img/sprite.png);
+  background-position: -24px -99px;
+  width: 12px;
+  height: 11px;
+}
+.icon-green-check {
+  background-image: url(../img/sprite.png);
+  background-position: -46px -99px;
+  width: 13px;
+  height: 8px;
+}
+.icon-heart {
+  background-image: url(../img/sprite.png);
+  background-position: -44px -36px;
+  width: 24px;
+  height: 22px;
+}
+.icon-home {
+  background-image: url(../img/sprite.png);
+  background-position: -44px 0px;
+  width: 26px;
+  height: 26px;
+}
+.icon-left {
+  background-image: url(../img/sprite.png);
+  background-position: -147px -70px;
+  width: 6px;
+  height: 9px;
+}
+.icon-loc {
+  background-image: url(../img/sprite.png);
+  background-position: -147px -27px;
+  width: 11px;
+  height: 15px;
+}
+.icon-percent {
+  background-image: url(../img/sprite.png);
+  background-position: -117px -31px;
+  width: 20px;
+  height: 21px;
+}
+.icon-question {
+  background-image: url(../img/sprite.png);
+  background-position: -80px -29px;
+  width: 21px;
+  height: 21px;
+}
+.icon-questions {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -99px;
+  width: 14px;
+  height: 14px;
+}
+.icon-right-arr {
+  background-image: url(../img/sprite.png);
+  background-position: -147px 0px;
+  width: 11px;
+  height: 17px;
+}
+.icon-search {
+  background-image: url(../img/sprite.png);
+  background-position: -117px -62px;
+  width: 18px;
+  height: 18px;
+}
+.icon-shareBtn {
+  background-image: url(../img/sprite.png);
+  background-position: -117px 0px;
+  width: 20px;
+  height: 21px;
+}
+.icon-text {
+  background-image: url(../img/sprite.png);
+  background-position: -38px -71px;
+  width: 21px;
+  height: 15px;
+}

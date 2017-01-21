@@ -1,0 +1,13 @@
+{
+  "name": "woltron",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "*",
+    "components-font-awesome": "~4.5.0",
+    "bootstrap-validator": "^0.10.2",
+    "wow": "wowjs#^1.1.2",
+    "animate.css": "animate-css#^3.5.2",
+    "jquery-form-styler": "^1.7.6",
+    "slick-carousel": "^1.6.0"
+  }
+}

@@ -1,0 +1,8 @@
+<div class="modal-wrap" ng-show="main.modal.active" ng-click="main.hideModal($event)">
+	<div class="modal-inner text-center">
+		<div class="close">×</div>
+		<img ng-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{main.modal.pkdx_id}}.png" alt="{{main.modal.name}}">
+		<h3>{{main.modal.name}}</h3>
+		<span ng-repeat="type in main.modal.types" class="{{type.name}} type" ng-click="main.selectType(type.name)">{{type.name}}</span>
+	</div>
+</div>
