@@ -11,6 +11,7 @@
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="bower_components/jquery.rateit/scripts/rateit.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+	<link rel="stylesheet" type="text/css" href="bower_components/jquery-form-styler/jquery.formstyler.css" />
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
 	<link rel="stylesheet" href="css/style.css">
 
@@ -19,6 +20,7 @@
 	<script src="bower_components/jquery.rateit/scripts/jquery.rateit.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+	<script src="bower_components/jquery-form-styler/jquery.formstyler.min.js"></script>
 </head>
 
 <body>
@@ -118,10 +120,8 @@
 								<input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
 								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
 							</div>
-
-
 						</div>
-						<div class="feedback"><span class="icon icon-feedback"></span><span class="count">3</span> отзыва</div>
+						<div class="feedbacks"><span class="icon icon-feedback"></span><span class="count">3</span> отзыва</div>
 						<div class="questions"><span class="icon icon-questions"></span><span class="count">4</span> вопроса</div>
 					</div>
 					<div class="about">
@@ -220,7 +220,6 @@
 
 					</div>
 				</div>
-				</p>
 				<!--<div class="line"></div>-->
 				<div class="specifications-container">
 
@@ -254,7 +253,7 @@
 							<td>-39 </td>
 						</tr>
 					</table>
-					<div class="more"><span class="icon icon-arr-down-red"></span>Показать все характеристики</div>
+					<span class="more"><span class="icon icon-arr-down-red"></span>Показать все характеристики</span>
 					<h3>Описание товара</h3>
 					<div class="specifications__descroption">
 						<p>Mobil Super 3000 X1 5W-40 представляет собой синтетическое моторное масло, обеспечивающее длительный срок службы двигателей в автомобилях различных типов и годов выпуска, а также повышенный уровень их защиты в широком диапазоне температур.</p>
@@ -262,6 +261,7 @@
 						<p>Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
 						<p>Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
 					</div>
+					<span class="more"><span class="icon icon-arr-down-red"></span>Показать все отзывы</span>
 					<div class="specifications__buttons">
 						<button class="feedbacks active">Отзывы (10)</button>
 						<button class="questions">Вопросы (7)</button>
@@ -278,7 +278,7 @@
 							<div class="feedback__answers__wrap">
 								<div class="feedback__answers">1 ответ</div>
 								<div class="feedback__give-answer">Ответить</div>
-								<div class="feedback__likes">Был ли вам полезен этот отзыв:</div>
+								<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
 							</div>
 						</div>
 						<div class="feedback__rating-wrap">
@@ -300,45 +300,592 @@
 							</div>
 						</div>
 					</div>
+					<div class="feedback">
+						<div class="feedback-inner">
+							<div class="feedback__name">Панас</div>
+							<div class="feedback__date">04.07.2016</div>
+							<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+								що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+							<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+							<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+							<div class="feedback__answers__wrap">
+								<div class="feedback__answers">1 ответ</div>
+								<div class="feedback__give-answer">Ответить</div>
+								<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+							</div>
+						</div>
+						<div class="feedback__rating-wrap">
+							<div class="feedback__rating-wrap__header">Оценка</div>
+							<div class="star-rating">
+								<div class="star-rating__wrap">
+									<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+								</div>
+								<div class="star-couner">3,0</div>
+							</div>
+						</div>
+					</div>
+					<div class="feedback">
+						<div class="feedback-inner">
+							<div class="feedback__name">Анастасия</div>
+							<div class="feedback__date">04.07.2016</div>
+							<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+								що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+
+							<div class="feedback__answers__wrap">
+								<div class="feedback__answers">1 ответ</div>
+								<div class="feedback__give-answer">Ответить</div>
+								<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+							</div>
+						</div>
+						<div class="feedback__rating-wrap">
+							<div class="feedback__rating-wrap__header">Оценка</div>
+							<div class="star-rating">
+								<div class="star-rating__wrap">
+									<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+									<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+								</div>
+								<div class="star-couner">5,0</div>
+							</div>
+						</div>
+					</div>
+					<span class="more"><span class="icon icon-arr-down-red"></span>Показать все отзывы</span>
+					<h3>Видеообзоры (2)</h3>
+					<div class="video-container">
+						<div class="video-wrap pause">
+							<video class="myHTMLvideo">							
+							<source src="media/oil.mp4" type="video/mp4">
+							Ваш браузер не поддерживает HTML5-видео.
+						</video>
+							<img src="img/play.png" alt="#" class="play-btn">
+						</div>
+						<div class="video-wrap pause">
+							<video class="myHTMLvideo">							
+							<source src="media/oil.mp4" type="video/mp4">
+							Ваш браузер не поддерживает HTML5-видео.
+						</video>
+							<img src="img/play.png" alt="#" class="play-btn">
+						</div>
+					</div>
+					<h3>Статьи (2)</h3>
+					<div class="articles-slider contols-right">
+						<div class="art art1">
+							<img src="img/art1.png" alt="#" class="art__img">
+							<div class="text-wrap">
+								<div class="art__date">16 августа 2016</div>
+								<h4 class="art__header">Подробный обзор и выявление недостатков навигатора DriveAssist 50LMT</h4>
+								<div class="art__text">Современные технологии буквально с каждым днем все глубже и глубже загоняют в могилу некоторые автомобильные девайсы, взять к примеру GPS навигатор. Еще каких-то два-три</div>
+							</div>
+						</div>
+						<div class="art art2">
+							<img src="img/art2.png" alt="#" class="art__img">
+
+						</div>
+					</div>
+					<h3>Сертификаты соответствия</h3>
+					<div class="certificates">
+						<div class="certificate"><img src="img/certificate1.png" alt="#"></div>
+						<div class="certificate"><img src="img/certificate2.png" alt="#"></div>
+						<div class="certificate"><img src="img/certificate3.png" alt="#"></div>
+						<div class="certificate"><img src="img/certificate4.png" alt="#"></div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="similar-slider-bottom">
+				<h2>С этим товаром так же покупают:</h2>
+				<ul class="filters cl ">
+					<li>Омыватели</li>
+					<li>Очистители</li>
+					<li>Топливные фильтры</li>
+					<li class="active">Моторное масло</li>
+					<li>Инструменты для авто</li>
+				</ul>
+				<div class="similar-slider cl">
+					<div class="similar-slider__item item1">
+						<div class="similar-slider__img-wrapper"><img src="img/item1.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</div>
+						<div class="similar-slider__price">104<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>3 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item2">
+						<div class="similar-slider__img-wrapper"><img src="img/item2.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Shell Helix HX7 10W-40 4 л</div>
+						<div class="similar-slider__price">456<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating42-5" type="radio" name="rating42" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating42-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating42-4" type="radio" name="rating42" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating42-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating42-3" type="radio" name="rating42" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating42-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating42-2" type="radio" name="rating42" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating42-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating42-1" type="radio" name="rating42" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating42-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>3 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item3">
+						<div class="similar-slider__img-wrapper"><img src="img/item3.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock red"> Заканчивается</div>
+
+						<div class="similar-slider__name cl">Моторное масло Mobil Super 3000 X1 5W-40 4 л</div>
+						<div class="similar-slider__price">268<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating43-5" type="radio" name="rating43" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating43-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating43-4" type="radio" name="rating43" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating43-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating43-3" type="radio" name="rating43" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating43-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating43-2" type="radio" name="rating43" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating43-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating43-1" type="radio" name="rating43" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating43-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>3 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item4">
+						<div class="similar-slider__img-wrapper"><img src="img/item4.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</div>
+						<div class="similar-slider__price">104<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating44-5" type="radio" name="rating" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating44-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating44-4" type="radio" name="rating44" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating44-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating44-3" type="radio" name="rating44" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating44-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating44-2" type="radio" name="rating44" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating44-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating44-1" type="radio" name="rating44" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating44-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>3 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item5">
+						<div class="similar-slider__img-wrapper"><img src="img/item5.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Shell Helix HX7 10W-40 4 л</div>
+						<div class="similar-slider__price">456 <span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating46-5" type="radio" name="rating46" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating46-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating46-4" type="radio" name="rating46" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating46-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating46-3" type="radio" name="rating46" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating46-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating46-2" type="radio" name="rating46" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating46-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating46-1" type="radio" name="rating46" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating46-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>3 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item6">
+						<div class="similar-slider__img-wrapper"><img src="img/item5.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Shell Helix HX7 10W-40 4 л</div>
+						<div class="similar-slider__price">456<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating45-5" type="radio" name="rating45" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating45-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating45-4" type="radio" name="rating45" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating45-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating45-3" type="radio" name="rating45" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating45-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating45-2" type="radio" name="rating45" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating45-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating45-1" type="radio" name="rating45" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating45-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>3 отзыва
+						</div>
+					</div>
 				</div>
 
 			</section>
+			<section class="customers-choose">
+				<h2>Покупатели выбирают для:</h2>
+				<select>
+					<option>Volkswagen Golf, 1.9</option>
+					<option>Volkswagen Golf, 1.9</option>
+					<option>Volkswagen Golf, 1.9</option>
+				</select>
+				<div class="similar-slider cl">
+					<div class="similar-slider__item item1">
+						<div class="similar-slider__img-wrapper"><img src="img/slider4-img1.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</div>
+						<div class="similar-slider__price">104<span>грн</span></div>
+					</div>
+					<div class="similar-slider__item item2">
+						<div class="similar-slider__img-wrapper"><img src="img/slider4-img2.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Shell Helix HX7 10W-40 4 л</div>
+						<div class="similar-slider__price">456<span>грн</span></div>
+					</div>
+					<div class="similar-slider__item item3">
+						<div class="similar-slider__img-wrapper"><img src="img/slider4-img3.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock red"> Заканчивается</div>
+
+						<div class="similar-slider__name cl">Моторное масло Mobil Super 3000 X1 5W-40 4 л</div>
+						<div class="similar-slider__price">268<span>грн</span></div>
+					</div>
+					<div class="similar-slider__item item4">
+						<div class="similar-slider__img-wrapper"><img src="img/slider4-img4.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Castrol Magnatec 10W-40 A3/B4 4 л</div>
+						<div class="similar-slider__price">104<span>грн</span></div>
+					</div>
+					<div class="similar-slider__item item5">
+						<div class="similar-slider__img-wrapper"><img src="img/slider4-img5.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Shell Helix HX7 10W-40 4 л</div>
+						<div class="similar-slider__price">456 <span>грн</span></div>
+					</div>
+					<div class="similar-slider__item item6">
+						<div class="similar-slider__img-wrapper"><img src="img/slider4-img5.png" alt="#"></div>
+						<div class="similar-slider__code">Код товара : 39207</div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+
+						<div class="similar-slider__name cl">Моторное масло Shell Helix HX7 10W-40 4 л</div>
+						<div class="similar-slider__price">456<span>грн</span></div>
+					</div>
+				</div>
+
+			</section>
+			<section class="similar-slider-bottom last ">
+
+				<h2>Покупатели выбирают для:</h2> <span class="more">Показать все характеристики <span class="icon icon-arr-down-red"></span></span>
+				<div class="similar-slider cl contols-right">
+					<div class="similar-slider__item item1">
+						<div class="similar-slider__img-wrapper"><img src="img/slider5-img1.png" alt="#"></div>
+
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+						<div class="similar-slider__name cl">Трансмиссионное масло CASTRO Manual EP 80W-90 1л</div>
+						<div class="similar-slider__price">345<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>32 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item2">
+						<div class="similar-slider__img-wrapper"><img src="img/slider5-img.png" alt="#"></div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+						<div class="similar-slider__name cl">Трансмиссионное масло CASTRO Manual EP 80W-90 1л</div>
+						<div class="similar-slider__price">345<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>32 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item3">
+						<div class="similar-slider__img-wrapper"><img src="img/slider5-img3.png" alt="#"></div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+						<div class="similar-slider__name cl">Трансмиссионное масло CASTRO Manual EP 80W-90 1л</div>
+						<div class="similar-slider__price">345<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>32 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item4">
+						<div class="similar-slider__img-wrapper"><img src="img/slider5-img4.png" alt="#"></div>
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+						<div class="similar-slider__name cl">Трансмиссионное масло CASTRO Manual EP 80W-90 1л</div>
+						<div class="similar-slider__price">345<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>32 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item5">
+						<div class="similar-slider__img-wrapper"><img src="img/slider5-img5.png" alt="#"></div>
+
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+						<div class="similar-slider__name cl">Трансмиссионное масло CASTRO Manual EP 80W-90 1л</div>
+						<div class="similar-slider__price">345<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>32 отзыва
+						</div>
+					</div>
+					<div class="similar-slider__item item6">
+						<div class="similar-slider__img-wrapper"><img src="img/slider5-img5.png" alt="#"></div>
+
+						<div class="similar-slider__in-stock"> <span class="icon icon-green-check"></span>В наличии</div>
+						<div class="similar-slider__name cl">Трансмиссионное масло CASTRO Manual EP 80W-90 1л</div>
+						<div class="similar-slider__price">345<span>грн</span></div>
+						<button class="buy">Купить</button>
+						<span class="icon icon-cmpareBtn"></span>
+						<div class="star-rating cl">
+							<div class="star-rating__wrap">
+								<input class="star-rating__input" id="star-rating41-5" type="radio" name="rating41" value="5">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-5" title="5 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-4" type="radio" name="rating41" value="4">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-4" title="4 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-3" type="radio" name="rating41" value="3">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-3" title="3 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-2" type="radio" name="rating41" value="2">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-2" title="2 out of 5 stars"></label>
+								<input class="star-rating__input" id="star-rating41-1" type="radio" name="rating41" value="1">
+								<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating41-1" title="1 out of 5 stars"></label>
+							</div>
+						</div>
+						<div class="feedbacks">
+							<div class="icon icon-feedback"></div>32 отзыва
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
-		<span class="icon icon-right-arr"></span>
+		<!--<span class="icon icon-right-arr"></span>-->
 	</main>
+	<footer>
+		<div class="container">
+			<div class="lists-wrap">
+				<div class="footer-list-wrap">
+					<h4>Каталог</h4>
+					<ul class="footer-ul">
+						<li><a href="#">Электроника</a></li>
+						<li><a href="#"> Звук и видео</a></li>
+						<li><a href="#">Запчасти и расходники</a></li>
+						<li><a href="#">Свет (освещение)</a></li>
+						<li><a href="#">Интерьер</a></li>
+						<li><a href="#">Экстерьер</a></li>
+						<li><a href="#">Колеса</a></li>
+					</ul>
+				</div>
+				<div class="footer-list-wrap">
+					<h4>&nbsp;</h4>
+					<ul class="footer-ul">
+						<li><a href="#">Багаж и крепление</a></li>
+						<li><a href="#">Автохимия</a></li>
+						<li><a href="#">Техпомощь</a></li>
+						<li><a href="#">Инструмент</a></li>
+						<li><a href="#">Туризм</a></li>
+						<li><a href="#">4х4 джипинг</a></li>
+						<li><a href="#">Мото</a></li>
+					</ul>
+				</div>
+				<div class="footer-list-wrap">
+					<h4>Компания</h4>
+					<ul class="footer-ul">
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Магазины</a></li>
+						<li><a href="#">Партнеры</a></li>
+						<li><a href="#">Оптовым покупателям</a></li>
+					</ul>
+				</div>
+				<div class="footer-list-wrap">
+					<h4>Покупателям</h4>
+					<ul class="footer-ul">
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Оплата</a></li>
+						<li><a href="#">Гарантия</a></li>
+						<li><a href="#">Кредит</a></li>
+						<li><a href="#">Бонусная программа</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+				</div>
+				<div class="footer-list-wrap">
+					<h4>Информация</h4>
+					<ul class="footer-ul">
+						<li><a href="#">Как выбрать</a></li>
+						<li><a href="#">Сравнительные тесты</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Часто задаваемые вопросы</a></li>
+					</ul>
+				</div>
+				<div class="copy-wrap">
+					<div class="copy">© 2016, База автозвука</div>
+					<div class="develop-by">Разработано в Турум-Бурум</div>
+				</div>
+			</div>
+			<div class="soc">
+				<div class="phone">0 800 30-15-85</div>
+				<div class="text">Бесплатно со стационарных и мобильных телефонов Украины</div>
+				<div class="text">Следите за нами в соцсетях:</div>
+
+				<div class="soc-wrap">
+					<a href="#"><span class="icon icon-fb"></span></a>
+					<a href="#"><span class="icon icon-google"></span></a>
+					<a href="#"><span class="icon icon-tw"></span></a>
+					<a href="#"><span class="icon icon-youtube"></span></a>
+					<a href="#"><span class="icon icon-vk"></span></a>
+					<a href="#"><span class="icon icon-instagram"></span></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.js"></script>
 	<script>
-		$(".similar-slider").slick({
-			// normal options...
-			infinite: true,
-			slidesToShow: 5,
-
-			// the magic
-			responsive: [{
-
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					infinite: true
-				}
-
-			}, {
-
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-					dots: true
-				}
-
-			}, {
-
-				breakpoint: 300,
-				settings: "unslick" // destroys slick
-
-			}],
-			arrows: true,
-			nextArrow: '<button type="button" class="slick-next"> <span class="icon icon-right-arr"></span></button>',
-			prevArrow: '<button type="button" class="slick-prev"> <span class="icon icon-right-arr"></span> </button>'
-		})
 	</script>
 </body>
 

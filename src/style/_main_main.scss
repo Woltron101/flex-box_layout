@@ -20,7 +20,10 @@
 	color: $fd;
 	h3 {
 		width: 100%;
-		margin-top: 0;
+		margin-top: 60px;
+		&:first-of-type {
+			margin-top: 0;
+		}
 	}
 	&__menu-list {
 		width: 100%;
@@ -84,6 +87,20 @@
 	}
 }
 
+.icon-arr-down-red {
+	margin-right: 5px;
+}
+
+.more {
+	border-bottom: 1px solid #c2c2c2;
+	margin: 20px 0;
+	display: inline-block;
+}
+
+.feedback~.feedback {
+	border-top: 0;
+}
+
 .feedback {
 	border: 1px solid #ffdc2c;
 	padding: 30px;
@@ -97,6 +114,9 @@
 	&__date {
 		@include fli();
 		color: #999999;
+	}
+	&__text {
+		margin-top: 20px;
 	}
 	&__advantage {
 		margin: 20px 0;
@@ -132,11 +152,11 @@
 	}
 	&__likes {
 		margin-left: auto;
-		color:$fl;
+		color: $fl;
 	}
-	&__rating-wrap__header{
+	&__rating-wrap__header {
 		font-size: 16px;
-		margin-bottom: 20px;	
+		margin-bottom: 20px;
 		font-weight: 700;
 	}
 	.star-rating {
@@ -146,5 +166,351 @@
 		font-size: 16px;
 		font-weight: 700;
 		margin-left: auto;
+	}
+	.icon-like,
+	.icon-dislike {
+		margin: 0 5px;
+	}
+	.dislike {
+		transform: rotate(180deg);
+		margin-bottom: -3px;
+	}
+	.like-count {
+		color: #57ae85;
+		font-weight: 700;
+	}
+	.dislike-count {
+		color: #f8727e;
+		font-weight: 700;
+	}
+}
+
+.play-btn {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	// z-index: 9999;
+}
+
+.video-container {
+	@include fl();
+	justify-content: space-between;
+}
+
+.video-wrap:first-child {
+	margin-right: 3%;
+}
+
+.video-wrap.pause {
+	position: relative;
+	.play-btn {
+		display: block;
+	}
+}
+
+video {
+	width: 100%;
+}
+
+.articles-slider {
+	margin-right: 45px;
+	position: relative;
+	.art1 {
+		width: 680px;
+		img {
+			width: 337px;
+		}
+	}
+	.art2 {
+		width: 230px;
+		img {
+			height: 260px;
+		}
+	}
+	.art {
+		&__img {
+			display: inline-block;
+			vertical-align: baseline;
+		}
+		&__header {
+			font-size: 20px;
+		}
+		&__date {
+			font-size: 12px;
+			color: #999999;
+		}
+		&__text {
+			font-size: 14px;
+			color: $fl;
+			line-height: 20px;
+		}
+	}
+	.text-wrap {
+		display: block;
+		float: right;
+		width: 343px;
+		padding: 28px;
+		border: 1px solid #e9eaeb;
+	}
+	.slick-slide {
+		margin-bottom: -6px;
+	}
+}
+
+.contols-right {
+	.slick-next.slick-arrow,
+	.slick-prev.slick-arrow {
+		height: 50%;
+		transform: translate(0);
+		right: -45px;
+	}
+	.slick-prev.slick-arrow {
+		bottom: 0;
+		top: auto;
+	}
+}
+
+.certificates {
+	@include fl();
+	justify-content: space-between;
+}
+
+.buy {
+	width: 121px;
+	height: 39px;
+	background-color: #fb2539;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	border: 0;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.similar-slider-bottom {
+	h2 {
+		float: left;
+	}
+	.icon-cmpareBtn {
+		margin: 9px 0 0 18px;
+		display: block;
+		float: left;
+	}
+	.star-rating {
+		float: left;
+	}
+	.feedbacks {
+		float: left;
+		margin-left: 15px;
+		.icon-feedback {
+			margin-right: 5px;
+		}
+	}
+	.star-rating__ico {
+		font-size: 14px;
+		margin-left: 9px;
+	}
+	.filters {
+		@include fl();
+		li {
+			@include fli();
+			padding: 0 15px;
+			border: 1px solid #e1e1e1;
+			line-height: 39px;
+			font-size: 14px;
+			color: $fd;
+			&.active {
+				border-color: #fb2539;
+			}
+		}
+	}
+}
+
+.customers-choose {
+	h2 {
+		float: left;
+	}
+}
+
+.similar-slider__img-wrapper {
+	line-height: 230px;
+	text-align: center;
+	img {
+		display: inline-block;
+	}
+}
+
+.jq-selectbox__select,
+.jq-selectbox__select:hover {
+	background: #fff !important;
+	border-radius: 0;
+	box-shadow: none;
+	width: 264px;
+	height: 39px;
+	border: 1px solid #d5d3d3;
+}
+
+.jq-selectbox__trigger {
+	border-left: 0;
+}
+
+.jq-selectbox__trigger-arrow {
+	border: 0;
+	background-image: url(../img/sprite.png);
+	background-position: -147px -70px;
+	width: 11px;
+	height: 7px;
+}
+
+.jq-selectbox__select-text {
+	width: 100%;
+}
+
+.jq-selectbox {
+	margin-top: 80px;
+	margin-left: 30px;
+}
+
+.similar-slider-bottom.last {
+	.similar-slider__in-stock {
+		margin-bottom: 10px;
+		float: none;
+	}
+	.similar-slider__price {
+		font-size: 20px;
+		span {
+			font-size: 16px;
+		}
+	}
+	.buy {
+		width: 96px;
+	}
+	.star-rating__ico {
+		margin-left: 5px;
+	}
+	.similar-slider__item {
+		border: 3px solid #eff0f3;
+		border-right: 0;
+	}
+	.more {
+		margin: 85px 0 0 60px;
+		.icon-arr-down-red {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+footer {
+	@include fl();
+	// background-color: #474a4e;
+	background-image: linear-gradient(90deg, #474a4e 66%, #3c3f43 0);
+	color: #fff;
+	padding-top: 50px;
+	h4 {
+		color: #fff;
+	}
+	ul a {
+		color: #fff;
+		opacity: 0.44;
+		&:hover {
+			color: #fff;
+			opacity: 1
+		}
+	}
+	.footer-ul {
+		li {
+			@include fl();
+		}
+		&:first-of-type {
+			li {
+				width: 100%;
+				@include fli();
+			}
+		}
+	}
+	.footer-list-wrap {
+		flex: 0 1 19%;
+	}
+	.lists-wrap {
+		@include fl();
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.copy-wrap {
+			width: 100%;
+			margin-right: 30px;
+			@include fl();
+			opacity: 0.44;
+			border-top: 1px solid #595c5f;
+			padding-top: 15px;
+		}
+		.develop-by {
+			margin-left: auto;
+			margin-right: 30px;
+		}
+	}
+	.lists-wrap {
+		width: 75%;
+	}
+	.soc {
+		
+		width: 288px;
+		.phone {
+			
+color: #ffffff;
+font-size: 23px;
+font-weight: 700;
+padding-left: 15px;
+		}
+		.text {
+			padding-left: 15px;
+			opacity: 0.44;
+		}
+		a {
+			width: 42px;
+			height: 42px;
+			display: inline-block;
+			position: relative;
+			margin: 14px;
+			.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+	.soc-wrap {
+		.icon {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: block;
+				border-radius: 50%;
+				width: 42px;
+				height: 42px;
+				border: 1px solid #3e6eb1;
+			}
+		}
+		.icon-google:after {
+			border-color: #dc4e41;
+		}
+		.icon-tw:after {
+			border-color: #00acec;
+		}
+		.icon-youtube:after {
+			border-color: #e35358;
+		}
+		.icon-vk:after {
+			border-color: #4c76a6;
+		}
+		.icon-instagram:after {
+			border-color: #c63b5c;
+		}
 	}
 }
