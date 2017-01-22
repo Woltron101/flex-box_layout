@@ -14,13 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="bower_components/jquery-form-styler/jquery.formstyler.css" />
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
 	<link rel="stylesheet" href="css/style.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-	<script src="bower_components/jquery.rateit/scripts/jquery.rateit.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
-	<script src="bower_components/jquery-form-styler/jquery.formstyler.min.js"></script>
 </head>
 
 <body>
@@ -41,7 +34,13 @@
 				</ul>
 				<ul class="header-top_city">
 					<li class="city_label">Ваш город:</li>
-					<li class="dropdown">Киев</span>
+					<li class="dropdown">
+						<select>
+							<option>Киев</option>
+							<option>Киев</option>
+							<option>Киев</option>
+						</select>
+						</span>
 					</li>
 				</ul>
 				<ul class="header-top_login">
@@ -56,7 +55,7 @@
 					<img src="img/logo.png" alt="logo">
 				</a>
 				<form action="#" class="header-mid_search">
-					<input type="text" class="search">
+					<input type="text" class="search" placeholder="Поиск по названию, коду, категории товара">
 					<input type="submit" class="icon icon-search" value="" />
 				</form>
 				<div class="header-mid_dropdown">0-800-30-15-85</div>
@@ -199,13 +198,13 @@
 				</div>
 
 			</section>
-			<section class="specifications">
+			<section class="specifications" id="specifications">
 				<ul class="specifications__menu-list">
-					<li><a href="#" class="red">Характеристики</a></li>
-					<li><a href="#">Описание</a></li>
-					<li><a href="#">Отзывы и вопросы  <span>(40)</span></a></li>
-					<li><a href="#">Видеообзоры и статьи</a></li>
-					<li><a href="#">Сертификаты</a></li>
+					<li><a href="#specifications" class="red">Характеристики</a></li>
+					<li><a href="#description">Описание</a></li>
+					<li><a href="#feedbacks">Отзывы и вопросы  <span>(40)</span></a></li>
+					<li><a href="#video">Видеообзоры и статьи</a></li>
+					<li><a href="#certificates">Сертификаты</a></li>
 				</ul>
 				<h3>Характеристики товара</h3>
 				<div class="similar-wrap">
@@ -252,122 +251,460 @@
 							<td>Температура застывания, ºC, ASTM D 97:</td>
 							<td>-39 </td>
 						</tr>
+						<tr class="toggle-row hidden">
+							<td>Класс вязкости: </td>
+							<td>5W-40</td>
+						</tr>
+						<tr class="toggle-row hidden">
+							<td>сСт при 40ºC: </td>
+							<td>84</td>
+						</tr>
+						<tr class="toggle-row hidden">
+							<td>сСт при 100ºC: </td>
+							<td>14</td>
+						</tr>
+						<tr class="toggle-row hidden">
+							<td>Зольность сульфатная, % мас., ASTM D 874:</td>
+							<td>1,1 </td>
+						</tr>
+						<tr class="toggle-row hidden">
+							<td>Содержание фосфора: </td>
+							<td>0,0095 </td>
+						</tr>
+						<tr class="toggle-row hidden">
+							<td>Температура вспышки, ºC, ASTM D 92: </td>
+							<td>222 </td>
+						</tr>
+						<tr class="toggle-row hidden">
+							<td>Температура застывания, ºC, ASTM D 97:</td>
+							<td>-39 </td>
+						</tr>
 					</table>
-					<span class="more"><span class="icon icon-arr-down-red"></span>Показать все характеристики</span>
+					<span class="more" onclick="showMore('.toggle-row')">
+						<span class="icon icon-arr-down-red"></span>
+					<span class="show-text">Показать все</span>
+					<span class="hide-text">Cкрыть</span>
+					<span>характеристики</span>
+					</span>
 					<h3>Описание товара</h3>
-					<div class="specifications__descroption">
+					<div class="specifications__descroption" id="description">
 						<p>Mobil Super 3000 X1 5W-40 представляет собой синтетическое моторное масло, обеспечивающее длительный срок службы двигателей в автомобилях различных типов и годов выпуска, а также повышенный уровень их защиты в широком диапазоне температур.</p>
 						<p>Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
-						<p>Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
-						<p>Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
+						<p class="toggle-paragraph hidden">Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
+						<p class="toggle-paragraph hidden">Продукты семейства Mobil Super 3000™ уже хорошо зарекомендовали себя на рынке, поэтому Вы можете быть уверены в том, что эксплуатационные свойства Вашего автомобиля будут полностью соответствовать ожиданиям.</p>
 					</div>
-					<span class="more"><span class="icon icon-arr-down-red"></span>Показать все отзывы</span>
-					<div class="specifications__buttons">
-						<button class="feedbacks active">Отзывы (10)</button>
-						<button class="questions">Вопросы (7)</button>
+					<span class="more" onclick="showMore('.toggle-paragraph')">
+						<span class="icon icon-arr-down-red"></span> Подробнее
+					</span>
+					<div class="specifications__buttons" id="feedbacks">
+						<button class="feedbacks active" onclick="showTab(1, this)">Отзывы (10)</button>
+						<button class="questions" onclick="showTab(2, this)">Вопросы (7)</button>
 						<button class="give-feedback">Оставить отзыв</button>
 					</div>
-					<div class="feedback">
-						<div class="feedback-inner">
-							<div class="feedback__name">Владимир</div>
-							<div class="feedback__date">04.07.2016</div>
-							<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
-								що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
-							<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
-							<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
-							<div class="feedback__answers__wrap">
-								<div class="feedback__answers">1 ответ</div>
-								<div class="feedback__give-answer">Ответить</div>
-								<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
-							</div>
-						</div>
-						<div class="feedback__rating-wrap">
-							<div class="feedback__rating-wrap__header">Оценка</div>
-							<div class="star-rating">
-								<div class="star-rating__wrap">
-									<input class="star-rating__input" id="star-rating2-5" type="radio" name="rating2" value="5">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-5" title="5 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating2-4" type="radio" name="rating2" value="4">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-4" title="4 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating2-3" type="radio" name="rating2" value="3">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-3" title="3 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating2-2" type="radio" name="rating2" value="2">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-2" title="2 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating2-1" type="radio" name="rating2" value="1">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-1" title="1 out of 5 stars"></label>
+					<div class="tab-container tab1">
+						<div class="feedback">
+							<div class="feedback-inner">
+								<div class="feedback__name">Владимир</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
 								</div>
-								<div class="star-couner">4,0</div>
 							</div>
-						</div>
-					</div>
-					<div class="feedback">
-						<div class="feedback-inner">
-							<div class="feedback__name">Панас</div>
-							<div class="feedback__date">04.07.2016</div>
-							<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
-								що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
-							<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
-							<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
-							<div class="feedback__answers__wrap">
-								<div class="feedback__answers">1 ответ</div>
-								<div class="feedback__give-answer">Ответить</div>
-								<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
-							</div>
-						</div>
-						<div class="feedback__rating-wrap">
-							<div class="feedback__rating-wrap__header">Оценка</div>
-							<div class="star-rating">
-								<div class="star-rating__wrap">
-									<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating2-5" type="radio" name="rating2" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-4" type="radio" name="rating2" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-3" type="radio" name="rating2" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-2" type="radio" name="rating2" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-1" type="radio" name="rating2" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">4,0</div>
 								</div>
-								<div class="star-couner">3,0</div>
 							</div>
 						</div>
-					</div>
-					<div class="feedback">
-						<div class="feedback-inner">
-							<div class="feedback__name">Анастасия</div>
-							<div class="feedback__date">04.07.2016</div>
-							<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
-								що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+						<div class="feedback">
+							<div class="feedback-inner">
+								<div class="feedback__name">Панас</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">3,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback">
+							<div class="feedback-inner">
+								<div class="feedback__name">Анастасия</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
 
-							<div class="feedback__answers__wrap">
-								<div class="feedback__answers">1 ответ</div>
-								<div class="feedback__give-answer">Ответить</div>
-								<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">5,0</div>
+								</div>
 							</div>
 						</div>
-						<div class="feedback__rating-wrap">
-							<div class="feedback__rating-wrap__header">Оценка</div>
-							<div class="star-rating">
-								<div class="star-rating__wrap">
-									<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
-									<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
-									<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+						<div class="feedback toggle-feedback hidden">
+							<div class="feedback-inner">
+								<div class="feedback__name">Владимир</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
 								</div>
-								<div class="star-couner">5,0</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating2-5" type="radio" name="rating2" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-4" type="radio" name="rating2" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-3" type="radio" name="rating2" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-2" type="radio" name="rating2" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-1" type="radio" name="rating2" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">4,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback toggle-feedback hidden">
+							<div class="feedback-inner">
+								<div class="feedback__name">Панас</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">3,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback toggle-feedback hidden">
+							<div class="feedback-inner">
+								<div class="feedback__name">Анастасия</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">5,0</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<span class="more"><span class="icon icon-arr-down-red"></span>Показать все отзывы</span>
+					<div class="tab-container tab2">						
+						<div class="feedback">
+							<div class="feedback-inner">
+								<div class="feedback__name">Панас</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">3,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback">
+							<div class="feedback-inner">
+								<div class="feedback__name">Владимир</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating2-5" type="radio" name="rating2" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-4" type="radio" name="rating2" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-3" type="radio" name="rating2" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-2" type="radio" name="rating2" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-1" type="radio" name="rating2" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">4,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback">
+							<div class="feedback-inner">
+								<div class="feedback__name">Анастасия</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">5,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback toggle-feedback hidden">
+							<div class="feedback-inner">
+								<div class="feedback__name">Владимир</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating2-5" type="radio" name="rating2" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-4" type="radio" name="rating2" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-3" type="radio" name="rating2" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-2" type="radio" name="rating2" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating2-1" type="radio" name="rating2" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating2-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">4,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback toggle-feedback hidden">
+							<div class="feedback-inner">
+								<div class="feedback__name">Панас</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+								<div class="feedback__advantage"><span>Достоинства:</span> хорошая батарея, и вообще неплохой смартфон</div>
+								<div class="feedback__flaw"><span>Недостатки:</span> не обнаружены</div>
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">3,0</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback toggle-feedback hidden">
+							<div class="feedback-inner">
+								<div class="feedback__name">Анастасия</div>
+								<div class="feedback__date">04.07.2016</div>
+								<div class="feedback__text">У Huawei краща основна камера ніж в Lenovo при тому, що Lenovo ніколи не були сильні в плані фото, а також у y6 pro кращий процесор (вища частота) і, як кажуть, краща оптимізація, що позитивно впливає на тривалість роботи. До того ж, мені здається,
+									що у Huawei менше проблем по якості ніж у Lenovo. Захист від бризг у Р1m є скоріше </div>
+
+								<div class="feedback__answers__wrap">
+									<div class="feedback__answers">1 ответ</div>
+									<div class="feedback__give-answer">Ответить</div>
+									<div class="feedback__likes">Был ли вам полезен этот отзыв: <span class="icon icon-like"></span><span class="like-count">14</span><span class="icon icon-like dislike"></span><span class="dislike-count">33</span></div>
+								</div>
+							</div>
+							<div class="feedback__rating-wrap">
+								<div class="feedback__rating-wrap__header">Оценка</div>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-rating3-5" type="radio" name="rating3" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-5" title="5 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-4" type="radio" name="rating3" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-4" title="4 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-3" type="radio" name="rating3" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-3" title="3 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-2" type="radio" name="rating3" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-2" title="2 out of 5 stars"></label>
+										<input class="star-rating__input" id="star-rating3-1" type="radio" name="rating3" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating3-1" title="1 out of 5 stars"></label>
+									</div>
+									<div class="star-couner">5,0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="more" onclick="showMore('.toggle-feedback')">
+						<span class="icon icon-arr-down-red"></span>
+					<span class="show-text">Показать все</span>
+					<span class="hide-text">Cкрыть</span> отзывы
+					</span>
+
 					<h3>Видеообзоры (2)</h3>
-					<div class="video-container">
+					<div class="video-container" id="video">
 						<div class="video-wrap pause">
 							<video class="myHTMLvideo">							
 							<source src="media/oil.mp4" type="video/mp4">
@@ -399,7 +736,7 @@
 						</div>
 					</div>
 					<h3>Сертификаты соответствия</h3>
-					<div class="certificates">
+					<div class="certificates" id="certificates">
 						<div class="certificate"><img src="img/certificate1.png" alt="#"></div>
 						<div class="certificate"><img src="img/certificate2.png" alt="#"></div>
 						<div class="certificate"><img src="img/certificate3.png" alt="#"></div>
@@ -411,7 +748,7 @@
 
 			<section class="similar-slider-bottom">
 				<h2>С этим товаром так же покупают:</h2>
-				<ul class="filters cl ">
+				<ul class="filters cl">
 					<li>Омыватели</li>
 					<li>Очистители</li>
 					<li>Топливные фильтры</li>
@@ -884,6 +1221,13 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script src="bower_components/jquery.rateit/scripts/jquery.rateit.min.js"></script>
+	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+	<script src="bower_components/jquery-form-styler/jquery.formstyler.min.js"></script>
+	<script src="bower_components/smooth-scroll/smooth-scroll.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
 	</script>

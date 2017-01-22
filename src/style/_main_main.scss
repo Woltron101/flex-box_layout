@@ -61,6 +61,9 @@
 		tr:nth-child(odd) {
 			background-color: #eff0f3;
 		}
+		tr.hidden {
+			display: none;
+		}
 	}
 	&__buttons {
 		@include fl();
@@ -74,6 +77,7 @@
 			height: 40px;
 			border: 1px solid #e1e1e1;
 			background-color: transparent;
+			cursor: pointer;
 			&.active {
 				border: 1px solid #fb2539;
 			}
@@ -95,10 +99,19 @@
 	border-bottom: 1px solid #c2c2c2;
 	margin: 20px 0;
 	display: inline-block;
+	cursor: pointer;
 }
-
+.hide-text {
+	display: none;
+}
+.rotate {
+	transform: rotate(180deg);
+}
 .feedback~.feedback {
 	border-top: 0;
+}
+.hidden {
+	display: none;
 }
 
 .feedback {
@@ -266,12 +279,17 @@ video {
 		transform: translate(0);
 		right: -45px;
 	}
+	.slick-next.slick-arrow {
+		top: 0;
+	}
 	.slick-prev.slick-arrow {
 		bottom: 0;
 		top: auto;
 	}
 }
-
+.tab2 {
+	display: none;
+}
 .certificates {
 	@include fl();
 	justify-content: space-between;
@@ -321,6 +339,7 @@ video {
 			line-height: 39px;
 			font-size: 14px;
 			color: $fd;
+			cursor: pointer;
 			&.active {
 				border-color: #fb2539;
 			}
@@ -341,7 +360,12 @@ video {
 		display: inline-block;
 	}
 }
-
+.similar-slider {
+	margin-top: 20px;
+	*:focus {
+		outline: transparent;
+	}
+}
 .jq-selectbox__select,
 .jq-selectbox__select:hover {
 	background: #fff !important;
@@ -358,14 +382,15 @@ video {
 
 .jq-selectbox__trigger-arrow {
 	border: 0;
-	background-image: url(../img/sprite.png);
-	background-position: -147px -70px;
-	width: 11px;
-	height: 7px;
+  background-image: url(../img/sprite.png);
+  background-position: -43px -146px;
+  width: 11px;
+  height: 7px;
 }
 
 .jq-selectbox__select-text {
 	width: 100%;
+	min-width: 140px;
 }
 
 .jq-selectbox {
@@ -408,6 +433,7 @@ footer {
 	background-image: linear-gradient(90deg, #474a4e 66%, #3c3f43 0);
 	color: #fff;
 	padding-top: 50px;
+	margin-top: 80px;
 	h4 {
 		color: #fff;
 	}
@@ -454,14 +480,12 @@ footer {
 		width: 75%;
 	}
 	.soc {
-		
 		width: 288px;
 		.phone {
-			
-color: #ffffff;
-font-size: 23px;
-font-weight: 700;
-padding-left: 15px;
+			color: #ffffff;
+			font-size: 23px;
+			font-weight: 700;
+			padding-left: 15px;
 		}
 		.text {
 			padding-left: 15px;
