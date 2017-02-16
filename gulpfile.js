@@ -235,3 +235,33 @@ gulp.task('watch', function() {
     gulp.watch('src/bower_components/**/*.*', ['copy']);
 });
 gulp.task('default', ['build', 'webserver', 'watch']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function solution(a) {
+    var sumArr = [];
+    a.forEach(function(element, index) {
+        var sum1 = 0,
+            sum2 = 0;
+        for (i = 0; i < index; i++) {
+            sum1 += a[i];
+        }
+        sumArr.push(sum1);
+    });
+    console.log(sumArr);
+}
